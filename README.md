@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PharmaTech
+
+PharmaTech is a modern, cross-platform desktop application built with Tauri, designed to streamline pharmaceutical management processes.
+
+## Features
+
+- Cross-platform compatibility (Windows, macOS, Linux)
+- Efficient and lightweight desktop application
+- Modern user interface
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [Rust](https://www.rust-lang.org/) (v1.77.2 or later)
+- [Tauri CLI](https://tauri.app/v1/api/cli/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```sh
+   git clone https://github.com/yourusername/pharmatech.git
+   cd pharmatech
+   ```
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```sh
+   npm run tauri dev
+   ```
 
-## Deploy on Vercel
+### Building for Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To build the application for production, follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Ensure you have met all the prerequisites mentioned in the "Getting Started" section.
+
+2. Open a terminal and navigate to the project root directory.
+
+3. Run the following command to build the production-ready application:
+
+   ```sh
+   npm run tauri build
+   ```
+
+4. Once the build process is complete, you can find the compiled binaries in the `src-tauri/target/release` directory.
+
+5. The exact location and format of the output will depend on your operating system:
+   - Windows: Look for `pharmatech.exe`
+   - macOS: Look for `pharmatech.app`
+   - Linux: Look for `pharmatech`
+
+6. You can now distribute the built application to users on the respective platforms.
+
+Note: Make sure to test the built application thoroughly before distribution to ensure all features are working as expected in the production environment.
