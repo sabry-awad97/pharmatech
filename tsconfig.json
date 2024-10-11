@@ -18,9 +18,11 @@
       }
     ],
     "paths": {
+      "@/tests/*": ["./__tests__/*"],
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "__tests__/**/*.{ts,tsx}"],
   "exclude": ["node_modules"]
 }
